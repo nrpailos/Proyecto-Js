@@ -127,16 +127,15 @@ document.addEventListener('DOMContentLoaded', mostrarGastos)
 
 
 listaGastosUI.addEventListener('click', (e) => {
-
     e.preventDefault();
-
+    console.log(e);
 
     if (e.target.innerHTML === 'delete') {
-
-        let texto = e.path[2].childNodes[1].innerHTML;
+        let texto = e.target.parentElement.innerHTML;
         if (e.target.innerHTML === 'delete') {
             //accion de eliminar
             eliminar(texto)
+
         }
 
     }
